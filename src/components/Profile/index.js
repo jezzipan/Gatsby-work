@@ -7,7 +7,7 @@ const Profile = () => (
             Web Developer | Data Scientist 
         </h2>
         <p>
-            Software developer. Areas of interest: web developer, UX, accessibility web, mathematical modeling, artificial intelligence, 
+            Software developer. Areas of interest: web developer, accessibility web, mathematical modeling, artificial intelligence, 
             machine learning, public policy, arts and cyber security.
             (ela/she/her)
          </p>
