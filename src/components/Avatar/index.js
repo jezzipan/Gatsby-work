@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+
+import * as S from "./styled"
 
 const Avatar = () => {
     const { avatarImage } = useStaticQuery(
@@ -8,18 +9,16 @@ const Avatar = () => {
             query {
                 avatarImage: file(relativePath: {eq: "profile-photo.png"}) {
                     childImageSharp {
-                        fluid(maxWidth: 60, maxHeight: 60) {
-                            ...GatsbyImageSharpFluid_tracedSVG
+                        fixed(width: 60, height: 60) {
+                            ...GatsbyImageSharpFixed_tracedSVG
                         }
-                       
-                }
-                
-                } 
+                    }
+                }     
             }
         `
     )
 
-    return <Img fluid={avatarImage.childImageSharp.fluid} className ="foo" style={{width: "60px"}} />
+    return <S.AvatarWrapper fixed={avatarImage.childImageSharp.fixed} />
 }
 
 export default Avatar
