@@ -13,14 +13,19 @@ const BlogPost = ({ data }) => {
 }
 
 export const query = graphql`
-query Post($slug: String) { 
+query Post($slug: String) 
+{ 
     markdownRemark(fields: { 
-        slug: { eq: $slug } 
-    }) { 
-        frontmatter { title } 
-        html } 
+      slug: 
+      { eq: $slug 
+      }
+    }) 
+    { 
+      frontmatter { title } 
+      html  
     }
-  }
+  })
+}
 `
 
 export default BlogPost
